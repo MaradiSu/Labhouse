@@ -1,0 +1,192 @@
+﻿---------------Calculator--------------
+<?php 
+extract($_POST);
+if(isset($save))
+{
+	switch($ch)
+	{
+		case '+':
+		$res=$fn+$sn;
+		break;
+		
+		case '-':
+		$res=$fn-$sn;
+		break;
+		
+		case '*':
+		$res=$fn*$sn;
+		break;
+		
+	}
+	
+}
+
+?>
+<!DOCTYP html>
+<html>
+	<head>
+		<title>Calculator- switch</title>
+		
+	</head>
+	<body>
+		<form method="post">
+		<table border="1" align="center">
+			<tr>
+				<th>Your Result</th>
+				<th><input type="number" readonly="readonly" disabled="disabled" value="<?php  echo @$res;?>"/></th>
+			</tr> 
+			
+			<tr>
+				<th>Enter your First num</th>
+				<th><input type="number" name="fn" value="<?php  echo @$fn;?>"/></th>
+			</tr> 
+			<tr>
+				<th>Enter your Second num</th>
+				<th><input type="number" name="sn" value="<?php  echo @$sn;?>"/></th>
+			</tr>
+			<tr>
+				<th>Select Your Choice</th>
+				<th>
+				<select name="ch">
+					<option>+</option>
+					<option>-</option>
+					<option>*</option>
+				</select>
+				</th>
+			</tr>
+			<tr>
+				
+				<th colspan="2">
+				<input type="submit" 
+				name="save" value="Show Result"/>
+				</th>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>
+----------------------matrix transpose------------
+<?php 
+
+// This function stores transpose 
+// of A[][] in B[][] 
+function transpose(&$A, &$B) 
+{ 
+	$N = 4; 
+	for ($i = 0; $i < $N; $i++) 
+		for ($j = 0; $j < $N; $j++) 
+			$B[$i][$j] = $A[$j][$i]; 
+} 
+
+// Driver code 
+$A = array(array(1, 1, 1, 1), 
+		array(2, 2, 2, 2), 
+		array(3, 3, 3, 3), 
+		array(4, 4, 4, 4)); 
+
+$N = 4; 
+
+transpose($A, $B); 
+
+echo "Result matrix is \n"; 
+for ($i = 0; $i < $N; $i++) 
+{ 
+	for ($j = 0; $j < $N; $j++) 
+	{ 
+		echo $B[$i][$j]; 
+		echo " "; 
+	} 
+	echo "\n"; 
+} 
+
+?> 
+--------------------Matrx multiplications----------
+<?php 
+// PHP program to multiply two 
+// square matrices. 
+
+// This function multiplies mat1[][] and 
+// mat2[][], and stores the result in res[][] 
+function multiply(&$mat1, &$mat2, &$res) 
+{ 
+	$N = 4; 
+	for ($i = 0; $i < $N; $i++) 
+	{ 
+		for ($j = 0; $j < $N; $j++) 
+		{ 
+			$res[$i][$j] = 0; 
+			for ($k = 0; $k < $N; $k++) 
+				$res[$i][$j] += $mat1[$i][$k] * 
+								$mat2[$k][$j]; 
+		} 
+	} 
+} 
+
+// Driver Code 
+$mat1 = array(array(1, 1, 1, 1), 
+			array(2, 2, 2, 2), 
+			array(3, 3, 3, 3), 
+			array(4, 4, 4, 4)); 
+
+$mat2 = array(array(1, 1, 1, 1), 
+			array(2, 2, 2, 2), 
+			array(3, 3, 3, 3), 
+			array(4, 4, 4, 4)); 
+
+multiply($mat1, $mat2, $res); 
+$N = 4; 
+echo ("Result matrix is \n"); 
+for ($i = 0; $i < $N; $i++) 
+{ 
+	for ($j = 0; $j < $N; $j++) 
+	{ 
+		echo ($res[$i][$j]); 
+		echo(" "); 
+	} 
+	echo ("\n"); 
+} 
+
+?> 
+---------------Matrix addition ------------------------
+<?php 
+// This function adds A[][] and 
+// B[][], and stores the result in C[][] 
+function add(&$A, &$B, &$C) 
+{ 
+	$N = 4; 
+	for ($i = 0; $i < $N; $i++) 
+		for ($j = 0; $j < $N; $j++) 
+			$C[$i][$j] = $A[$i][$j] + 
+						$B[$i][$j]; 
+} 
+
+// Driver code 
+$A = array(array(1, 1, 1, 1), 
+		array(2, 2, 2, 2), 
+		array(3, 3, 3, 3), 
+		array(4, 4, 4, 4)); 
+
+$B = array(array(1, 1, 1, 1), 
+		array(2, 2, 2, 2), 
+		array(3, 3, 3, 3), 
+		array(4, 4, 4, 4)); 
+
+$N = 4; 
+add($A, $B, $C); 
+
+echo "Result matrix is \n"; 
+for ($i = 0; $i < $N; $i++) 
+{ 
+	for ($j = 0; $j < $N; $j++) 
+	{ 
+		echo $C[$i][$j]; 
+		echo " "; 
+	} 
+	echo "\n" ; 
+} 
+
+// This code is contributed 
+// by Shivi_Aggarwal 
+?> 
+
+

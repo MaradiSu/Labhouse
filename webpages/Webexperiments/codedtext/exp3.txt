@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+ <div id="header"></div>
+ <script>
+  var size = 0, temp = 1,text="TEXT-GROWING",color;
+  function fontresizefunction()
+  {
+   if(temp==1)
+    size+=5,color="red";
+   else
+    size-=5,color="blue";
+   document.getElementById("header").innerHTML = "<h1 style=\"font-size: "+size+"px ; margin: 0px; color : "+color+"\"><b> "+text+"</b></h1>";
+   if(size==50)
+    temp = 0, text="TEXT-SHRINKING";
+   if(size ==5)
+    temp = 1, text="TEXT-GROWING";
+   timeoutfunction();
+  }
+  function timeoutfunction()
+  {
+   setTimeout(fontresizefunction,300);
+  }
+  timeoutfunction();
+ </script>
+</body>
+</html>

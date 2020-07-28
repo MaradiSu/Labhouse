@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<?xml-stylesheet type="text/css" href="Rule.css"?> 
+<students> 
+	<heading>Welcome To Hometute Lab house </heading> 
+	<student> 
+		<USN>15gaec9087</USN> 
+		<NAME>Chrisbates</NAME> 
+		<EMAIL>Wiley</EMAIL> 
+		<BRANCH>CSE</BRANCH> 
+		<COLLEGE>UVCE</COLLEGE> 
+        <DOJ>23-06-1992</DOJ>
+	</student>
+    <student> 
+		<USN>15gaec9087</USN> 
+		<NAME>Chrisbates</NAME> 
+		<EMAIL>Wiley</EMAIL> 
+		<BRANCH>CSE</BRANCH> 
+		<COLLEGE>UVCE</COLLEGE> 
+        <DOJ>23-06-1992</DOJ>
+	</student>
+    <student> 
+		<USN>15gaec9087</USN> 
+		<NAME>Chrisbates</NAME> 
+		<EMAIL>Wiley</EMAIL> 
+		<BRANCH>CSE</BRANCH> 
+		<COLLEGE>UVCE</COLLEGE> 
+        <DOJ>23-06-1992</DOJ>
+	</student>
+</students> 
+---------------------css---------------
+ students{ 
+	color: white; 
+	background-color : gray; 
+	width: 100%; 
+} 
+heading { 
+	color: green; 
+	font-size : 40px; 
+	background-color : powderblue; 
+} 
+heading, USN, BRANCH, NAME, EMAIL, DOJ,COLLEGE { 
+	display : block; 
+} 
+title { 
+	font-size : 25px; 
+	font-weight : bold; 
+} 
